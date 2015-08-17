@@ -45,15 +45,27 @@ public class TriangleTest {
     assertEquals(false, testTriangle.isIsosceles());
   }
 
-  // @Test
-  // public void isSquare_whenNotASquare_false() {
-  //   Triangle testTriangle = new Triangle(2,4);
-  //   assertEquals(false, testTriangle.isSquare());
-  // }
-  //
-  // @Test
-  // public void isSquare_allSidesEqual_true() {
-  //   Triangle testTriangle = new Triangle(2,2);
-  //   assertEquals(true, testTriangle.isSquare());
-  // }
+  @Test
+  public void newTriangle_isScalene() {
+    Triangle testTriangle = new Triangle(17,8,3);
+    assertEquals(true, testTriangle.isScalene());
+  }
+
+  @Test
+  public void newTriangle_isNotScalene() {
+    Triangle testTriangle = new Triangle(17,3,3);
+    assertEquals(false, testTriangle.isScalene());
+  }
+
+  @Test
+  public void isTriangle_whenNotTriangle_false() {
+    Triangle testTriangle = new Triangle(2,5,2);
+    assertEquals(false, testTriangle.isTriangle());
+  }
+
+  @Test
+  public void isTriangle_true() {
+    Triangle testTriangle = new Triangle(2,2,3);
+    assertEquals(true, testTriangle.isTriangle());
+  }
 }
